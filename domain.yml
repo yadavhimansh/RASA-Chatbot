@@ -1,0 +1,120 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- automate
+- knowledge_base
+- ask_environment
+- ask_journey
+- weather
+- city
+- homepage
+- assist
+- out_of_scope
+- nlu_fallback
+entities:
+- knowledge
+- Environment
+- Journey_Name
+- component
+- journey
+slots:
+  Environment:
+    type: text
+    influence_conversation: true
+  Journey_Name:
+    type: text
+    influence_conversation: true
+  component:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_ask_Environment:
+  - buttons:
+    - payload: '/ask_environment{"Environment": "Bacchus"}'
+      title: Bacchus
+    - payload: '/ask_environment{"Environment": "Mars"}'
+      title: Mars
+    text: Could you please let me know the Environment Please?
+  utter_ask_Journey_Name:
+  - text: Could you please let me know the Journey_Name, please?
+  utter_ask_component:
+  - buttons:
+    - payload: '/homepage{"component" : "Order"}'
+      title: Order Journey
+    - payload: '/homepage{"component" : "Fault"}'
+      title: Fault Journey
+    text: Looking for some help with any of these.
+  utter_component:
+  - text: Component like OBIM,Siebel,Engg.com etc
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_automate:
+  - text: okay I will automate your journey
+  utter_details_thanks:
+  - text: "Thanks for providing the required details, we will start the automation\
+      \ for mentioned journey \nEnviroment: {Environment},\nJourney_Name: {Journey_Name}"
+  utter_details_thanks2:
+  - text: "journey \nComponent: {component}"
+  utter_environment:
+  - text: My environment is SIA
+  utter_city:
+  - text: which city you want to check for?
+  utter_temp:
+  - text: Today's temperature is {temp} degree Celcius.
+  utter_out_of_scope:
+  - text: Sorry, I can't handle that request.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_brain:
+  - text: Yes sure I will help you for the next step.
+  utter_brain_response:
+  - text: Document {temp}
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- action_knowledge_base
+- action_submit
+- utter_automate
+- utter_city
+- utter_temp
+- action_weather_api
+- action_submit2
+- action_brain_api
+forms:
+  getQuery_automation:
+    Environment:
+    - entity: Environment
+      type: from_entity
+    Journey_Name:
+    - entity: Journey_Name
+      type: from_entity
+  getQuery_order:
+    component:
+    - entity: component
+      type: from_entity

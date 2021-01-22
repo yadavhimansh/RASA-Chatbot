@@ -1,0 +1,247 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: automate
+  examples: |
+    - Could you please automate the [FTTP](journey) Journey?
+    - Please automate the [FTTP Provide](journey)
+    - Automate the [FTTP Provide](journey)
+    - I want to automate the Journey
+    - Please automate the current journey.
+
+- intent: knowledge_base
+  examples: |
+    - What is [FTTP](knowledge)?
+    - What is [exchange](knowledge)?
+    - What is [provide order](knowledge)?
+    - Tell me about [FTTP](knowledge)?
+    - what is [fttp](knowledge)
+    - What do you understand by [fttp](knowledge)?
+    - Tell me about [exchange](knowledge)?
+    - Tell me about [provide order](knowledge)?
+    - What is [Modify Order](knowledge)?
+    - what is [modify order](knowledge)
+    - What kind of [changes](knowledge) present in [modify order](knowledge)?
+    - what is [FTTP basic provide](knowledge)?
+    - what is [provisioning](knowledge)?
+    - What all [provisioning system](knowledge)?
+    - How does FTTP [broadband](knowledge) work?
+    - How [FTTP](knowledge) will [work](knowledge)?
+    - What is [B2B](knowledge) ?
+    - What is [Sentry](knowledge) ?
+    - What is [ESB](knowledge) ?
+    - What is [OR-Siebel](knowledge) ?
+    - What is Siebel?
+    - What is Flow ?
+    - What is GTC-JLODE ?
+    - What is [Phoenix](knowledge) ?
+    - What is SRIMS ?
+    - What is RMDM ?
+    - What is [NAD](knowledge)?
+    - What is PMF ?
+    - What is FOS ?
+    - What is ONCE ?
+    - What is FT2 ?
+    - What is WMMHW ?
+    - What is CSS ?
+    - What is EWOCS ?
+    - What is Piper ?
+    - What is OR-NIMS ?
+    - What is WFMT ?
+    - What is GEO-HUB ?
+    - What is SRAP ?
+    - What is ATLANTIS ?
+    - What is BAL ?
+    - What is FusionWorks ?
+    - What is eMLc ?
+    - What is Appointing ?
+    - What is Address-Match ?
+    - What is ServiceFlow ?
+    - What is AIB ?
+    - What is Harrier ?
+    - What is Yukon ?
+    - What is SMARTS ?
+    - What is EMP-PAL ?
+    - What is ASC ?
+    - What is Service ?
+    - What is Flow ?
+    - What is CEMCTAM ?
+    - What is Portal ?
+    - How to [place FTTP](knowledge) provide order?
+    - Where can I find OGHP and NAD?
+    - Tell me about the different [environments](knowledge).
+    - What is [Test Enviroment](knowledge)?
+    - Why is [test environment needed](knowledge)?
+    - What is [E2E](knowledge)?
+    - What is [CST](knowledge)?
+    - what is OGHP?
+    - Tell different [types of NAD](knowledge).
+    - What is [Gold NAD](knowledge) Key?
+    - What is [Silver NAD](knowledge) key?
+    - How to create OGHP?, How to create NAD?
+    - What is OBIM?
+    - What is FTTC?, FTTC, Tell me about FTTC
+    - How to get the access for OBIM portal?
+    - What is Siebel order number?
+    - How to identify any order on test environments?
+    - What is orderline?
+    - What is Parent and Child OrderLine?
+    - Why do we monitor an order?, Why order monitoring is needed?
+    - How much time it will take to complete an order?
+    - What is call-sequence?
+    - What is drivers in Flow?
+    - Why timer burst is required?
+    - What is the next step after bursting the timers?
+    - What is WM Ref Number?
+    - Why is Task Manager?
+    - Why Task Manager is required?
+
+- intent: ask_environment
+  examples: |
+    - Could you please let me know the Environment?
+    - My environment is [Bachhus](Environment)
+    - [Bachhus](Environment)
+    - [A](Environment)
+    - [B](Environment)
+    - [C](Environment)
+    - [Mars](Environment)
+    - [mars](Environment)
+    - My Environment is [Mars](Environment)
+    - [bacchus](Environment)
+    - Could you please let me know the environment?
+
+- intent: ask_journey
+  examples: |
+    - Please provide the journey Name
+    - Journey is [FTTP](Journey_Name)
+    - [FTTP](Journey_Name)
+
+- intent : out_of_scope
+  examples: |
+    - that's not what I want to do
+    - wait stop
+    - you're no help
+    - this is no help at all
+    - how old are you
+    - I want to order a pizza
+    - tell me the weather
+
+- intent: weather
+  examples: |
+    - what's the weather
+    - i want to know the weather of today
+    - tell me the weather forcast
+    - hows the weather today
+
+- intent: city
+  examples: |
+    - Delhi
+    - delhi
+    - chandigarh
+    - mohali
+    - mumbai
+    - jaipur
+
+- intent: homepage
+  examples: |
+    - Looks like you are in openreach [Siebel](component) portal page.
+    - Looks like you are in [OBIM](component) page.
+    - Looks like you are in [Engg.com](component)
+
+- intent: assist
+  examples : |
+    - I want help.
+    - Could you please help me with this step?
+    - Could you please guide for next step?
+    - I am stuck here. Could you please help me?
+    - Please let me know the next step for this Journey
