@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 #from werkzeug.security import generate_password_hash
 
-client = MongoClient("mongodb+srv://test:test@chatapp.4bdmu.mongodb.net/test?retryWrites=true&w=majority")
+client = MongoClient("write the path where you can get the data in mongodb")
 
 # =============================================================================
 chat_db = client.get_database("Chatbot")
